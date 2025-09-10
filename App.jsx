@@ -5,6 +5,7 @@ import Login from './src/screens/login/index.jsx';
 const ContainerApp = styled.SafeAreaView`
     flex: 1;
 `;
+
 export default function App() {
     return (
         <ContainerApp>
