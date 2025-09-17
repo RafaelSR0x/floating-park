@@ -1,6 +1,6 @@
 import {
     LoginContainer,
-    LoginImage,
+    Image,
     Title,
     InputWrapper,
     StyledInput,
@@ -17,7 +17,7 @@ export default function Login() {
     const [showPassword, setShowPassword] = useState(false);
     return (
         <LoginContainer>
-            <LoginImage
+            <Image
                 source={require('../../assets/images/logo-floating-park.png')}
                 style={{ width: 150, height: 134 }}
             />

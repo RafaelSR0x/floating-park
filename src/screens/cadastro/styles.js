@@ -1,12 +1,11 @@
 import styled from 'styled-components/native';
 
-export const LoginContainer = styled.View`
+export const CadastroContainer = styled.View`
     flex: 1;
-    display: flex;
+    background-color: #5b37b7;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    background-color: #5b37b7;
 `;
 
 export const Image = styled.Image`
@@ -18,6 +17,12 @@ export const Title = styled.Text`
     font-size: 40px;
     color: #fff;
 `;
+
+export const Form = styled.View`
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+`
 
 export const InputWrapper = styled.View`
     width: 90%;
