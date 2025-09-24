@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 import Cadastro from './src/screens/cadastro/index.jsx';
 import Login from './src/screens/login/index.jsx';
 import EditarUsuario from './src/screens/editar-usuario/index.jsx';
+import Home from './src/screens/home/index.jsx';
 
 const ContainerApp = styled.SafeAreaView`
     flex: 1;
@@ -22,7 +23,7 @@ export default function App() {
     return (
         <ContainerApp>
             <StatusBar style="light" backgroundColor="rgba(255, 255, 255, 0.5)" translucent />
-            <EditarUsuario />
+            <Home />
         </ContainerApp>
     );
 }
