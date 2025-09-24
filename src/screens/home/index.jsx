@@ -1,18 +1,13 @@
 import Card from "../../assets/components/Card.jsx";
 import Header from "../../assets/components/Header.jsx";
-import { BottomNavBar, ContainerCards, HeaderHome, HomeContainer, LogoHeader, TitleHeader } from "./styles";
+import BottomBar from "../../assets/components/BottomBar.jsx";
+import React, { useState } from 'react';
+import {ContainerCards, HomeContainer } from "./styles";
 
 export default function Home() {
+    const [activeTab, setActiveTab] = useState('inicio');
     return (
         <HomeContainer>
-            {/* <HeaderHome>
-                <LogoHeader
-                    source={require('../../assets/images/logo-header.png')}
-                    style={{ width: 102, height: 33 }}
-                />
-                <TitleHeader>Veículos</TitleHeader>
-                <LogoHeader source={require('../../assets/images/logo-header.png')} style={{ width: 44, height: 39 }} />
-            </HeaderHome> */}
             <Header />
             <ContainerCards
                 contentContainerStyle={{
@@ -26,12 +21,9 @@ export default function Home() {
                 <Card />
                 <Card />
                 <Card />
-                
             </ContainerCards>
 
-            <BottomNavBar>
-
-            </BottomNavBar>
+            <BottomBar activeTab={activeTab} onTabPress={setActiveTab} />
         </HomeContainer>
     );
 }
