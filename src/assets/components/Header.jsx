@@ -36,7 +36,7 @@ const Title = styled.Text`
     font-size: 18px;
 `;
 
-export default function Header() {
+export default function Header({title}) {
     const [menuVisible, setMenuVisible] = useState(false);
 
     return (
@@ -47,7 +47,7 @@ export default function Header() {
                         source={require('../../assets/images/logo-header.png')}
                         style={{ width: 102, height: 33 }}
                     />
-                    <Title>Veículos</Title>
+                    <Title>{title}</Title>
                 </ContainerLogoTitle>
 
                 <Menu>

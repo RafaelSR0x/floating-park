@@ -11,6 +11,10 @@ const Container = styled.View`
     border-top-color: #333;
     padding-top: 5px;
     height: 90px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
 `;
 
 const TabButton = styled.TouchableOpacity`

@@ -8,7 +8,7 @@ export default function Home() {
     const [activeTab, setActiveTab] = useState('inicio');
     return (
         <HomeContainer>
-            <Header />
+            <Header title = "Veículos"/>
             <ContainerCards
                 contentContainerStyle={{
                     alignItems: 'center',
