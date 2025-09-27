@@ -14,7 +14,7 @@ const HeaderContainer = styled.View`
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    margin-top: 30px;
+    margin-top: 24px;
 `;
 
 const ContainerLogoTitle = styled.View`
