@@ -26,7 +26,6 @@ export default function Saida() {
                 />
             </InputWrapper>
             <PrimaryButton title="Verificar" onPress={handleProhibited} />
-            <BottomBar activeTab={activeTab} onTabPress={setActiveTab} />
         </ContainerSaida>
     );
 }

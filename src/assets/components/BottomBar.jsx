@@ -30,23 +30,24 @@ const Label = styled.Text`
     margin-top: 3px;
 `;
 
-export default function BottomBar({ activeTab, onTabPress }) {
+export default function BottomBar({ state, descriptors, navigation }) {
     return (
         <Container>
-            <TabButton onPress={() => onTabPress('inicio')}>
-                <Ionicons name="home" size={28} color={activeTab === 'inicio' ? '#fff' : '#aaa'} />
-                <Label active={activeTab === 'inicio'}>Início</Label>
-            </TabButton>
+            {state.routes.map((route, index) => {
+                const isFocused = state.index === index;
 
-            <TabButton onPress={() => onTabPress('entrada')}>
-                <Ionicons name="car" size={28} color={activeTab === 'entrada' ? '#fff' : '#aaa'} />
-                <Label active={activeTab === 'entrada'}>Entrada</Label>
-            </TabButton>
+                let iconName;
+                if (route.name === 'Home') iconName = 'home';
+                else if (route.name === 'Entrada') iconName = 'car';
+                else if (route.name === 'Saida') iconName = 'exit-outline';
 
-            <TabButton onPress={() => onTabPress('saida')}>
-                <Ionicons name="exit-outline" size={28} color={activeTab === 'saida' ? '#fff' : '#aaa'} />
-                <Label active={activeTab === 'saida'}>Saída</Label>
-            </TabButton>
+                return (
+                    <TabButton key={route.key} onPress={() => navigation.navigate(route.name)}>
+                        <Ionicons name={iconName} size={28} color={isFocused ? '#fff' : '#aaa'} />
+                        <Label active={isFocused}>{route.name.charAt(0).toUpperCase() + route.name.slice(1)}</Label>
+                    </TabButton>
+                );
+            })}
         </Container>
     );
 }

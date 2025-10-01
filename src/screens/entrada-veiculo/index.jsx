@@ -25,7 +25,6 @@ export default function Entrada() {
                 />
             </InputWrapper>
             <PrimaryButton title="Enviar" onPress={handleProhibited} />
-            <BottomBar activeTab={activeTab} onTabPress={setActiveTab} />
         </ContainerSaida>
     );
 }

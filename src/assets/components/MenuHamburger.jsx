@@ -31,9 +31,7 @@ const HeaderRow = styled.View`
 
 const LogoImage = styled.Image``;
 
-const CloseButton = styled.TouchableOpacity`
-    
-`;
+const CloseButton = styled.TouchableOpacity``;
 
 const MenuItem = styled.TouchableOpacity`
     padding: 15px 0;

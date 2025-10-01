@@ -22,8 +22,6 @@ export default function Home() {
                 <Card />
                 <Card />
             </ContainerCards>
-
-            <BottomBar activeTab={activeTab} onTabPress={setActiveTab} />
         </HomeContainer>
     );
 }
