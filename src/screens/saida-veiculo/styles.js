@@ -8,7 +8,6 @@ export const ContainerSaida = styled.View`
     gap: 50px;
     background-color: #5b37b7;
     border: 0px;
-    
 `;
 
 export const Image = styled.Image`

@@ -47,8 +47,8 @@ export default function Card() {
                 />
                 <ContentCard>
                     <TextPlaca>Placa: ABC-1234</TextPlaca>
-                    <SmallText>Entrada: </SmallText>
-                    <SmallText>Saída: </SmallText>
+                    <SmallText>Data de entrada: </SmallText>
+                    <SmallText>Hora: </SmallText>
                 </ContentCard>
             </CardBox>
         </ContainerCard>

@@ -9,7 +9,9 @@ const Container = styled.View`
     background-color: #323232;
     border-top-width: 1px;
     border-top-color: #333;
-    padding-top: 5px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding-top: 7px;
     height: 90px;
     position: absolute;
     bottom: 0;
@@ -31,6 +33,7 @@ const Label = styled.Text`
 `;
 
 export default function BottomBar({ state, descriptors, navigation }) {
+    if (!state) return null;
     return (
         <Container>
             {state.routes.map((route, index) => {

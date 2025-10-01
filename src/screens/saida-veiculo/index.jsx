@@ -1,16 +1,24 @@
-import BottomBar from '../../assets/components/BottomBar';
 import Header from '../../assets/components/Header';
 import PrimaryButton from '../../assets/components/PrimaryButton';
 import { ContainerSaida, Image, Title, InputWrapper, StyledInput, handleProhibited } from './styles';
 import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Feather';
+import { useNavigation } from '@react-navigation/native';
+import RegistroSaida from '../registro-saida';
 
 export default function Saida() {
-    const [activeTab, setActiveTab] = useState('inicio');
+    const navigation = useNavigation();
     const [saida, setSaida] = useState('');
+
+    const handleVerificar = () => {
+        navigation.navigate('RegistroSaida', { placa: saida });
+    };
+
+
+
     return (
         <ContainerSaida>
-            <Header title = "Saída"/>
+            <Header title="Saída" />
             <Image source={require('../../assets/images/logo-floating-park.png')} style={{ width: 213, height: 190 }} />
 
             <Title>Digite a placa do veículo que está de saída</Title>
@@ -25,7 +33,8 @@ export default function Saida() {
                     onChangeText={setSaida}
                 />
             </InputWrapper>
-            <PrimaryButton title="Verificar" onPress={handleProhibited} />
+
+            <PrimaryButton title="Verificar" onPress={handleVerificar} />
         </ContainerSaida>
     );
 }
