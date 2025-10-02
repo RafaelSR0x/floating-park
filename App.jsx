@@ -47,6 +47,10 @@ export default function App() {
                 <Stack.Navigator screenOptions={{ headerShown: false }}>
                     <Stack.Screen name="BottomTabs" component={BottomTabs} />
                     <Stack.Screen name="RegistroSaida" component={RegistroSaida} />
+                    <Stack.Screen name="EditarUsuario" component={EditarUsuario} />
+                    <Stack.Screen name="Cadastro" component={Cadastro} />
+                    <Stack.Screen name="Sair" component={Login} />
+                    <Stack.Screen name="Home" component={Home} />
                 </Stack.Navigator>
             </NavigationContainer>
         </>

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Modal, Animated, Dimensions, TouchableWithoutFeedback, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
 import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 const { width } = Dimensions.get('window');
 
@@ -49,6 +50,21 @@ export default function MenuHamburger({ visible, onClose }) {
     const [showModal, setShowModal] = useState(visible);
     const slideAnim = useRef(new Animated.Value(width)).current;
     const fadeAnim = useRef(new Animated.Value(0)).current;
+
+    const navigation = useNavigation();
+    const [saida, setSaida] = useState('');
+
+    const handleUsuario = () => {
+        navigation.navigate('EditarUsuario');
+    };
+
+    const handleCadastrar = () => {
+        navigation.navigate('Cadastro');
+    };
+
+    const handleSair = () => {
+        navigation.navigate('Sair');
+    };
 
     useEffect(() => {
         if (visible) {
@@ -102,15 +118,15 @@ export default function MenuHamburger({ visible, onClose }) {
                             </HeaderRow>
 
                             <ScrollView>
-                                <MenuItem onPress={() => console.log('Editar perfil')}>
+                                <MenuItem onPress={handleUsuario}>
                                     <MenuText>Editar perfil</MenuText>
                                 </MenuItem>
 
-                                <MenuItem onPress={() => console.log('Cadastrar usuário')}>
+                                <MenuItem onPress={handleCadastrar}>
                                     <MenuText>Cadastrar usuário</MenuText>
                                 </MenuItem>
 
-                                <MenuItem onPress={() => console.log('Sair')}>
+                                <MenuItem onPress={handleSair}>
                                     <MenuText>Sair</MenuText>
                                 </MenuItem>
                             </ScrollView>
