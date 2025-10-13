@@ -28,6 +28,7 @@ export default function Entrada() {
             </InputWrapper>
             <PrimaryButton title="Enviar" onPress={() => setModalVisible(true)} />
 
+            <BottomBar />
             <AppModal
                 visible={modalVisible}
                 onClose={() => setModalVisible(false)}

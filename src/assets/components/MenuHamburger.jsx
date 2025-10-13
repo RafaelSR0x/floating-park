@@ -63,7 +63,7 @@ export default function MenuHamburger({ visible, onClose }) {
     };
 
     const handleSair = () => {
-        navigation.navigate('Sair');
+        navigation.navigate('Login');
     };
 
     useEffect(() => {

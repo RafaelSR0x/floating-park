@@ -1,16 +1,16 @@
-import {
-    CadastroContainer,
-    Image,
-    InputWrapper,
-    StyledInput,
-    Title,
-    ToggleButton,
-    handleUpdate,
-    Form,
-} from './styles';
+import { 
+    CadastroContainer, 
+    Image, 
+    InputWrapper, 
+    StyledInput, 
+    Title, 
+    ToggleButton, 
+    Form } 
+    from './styles';
 import Icon from 'react-native-vector-icons/Feather';
 import React, { useState } from 'react';
 import PrimaryButton from '../../assets/components/PrimaryButton';
+import { useNavigation } from '@react-navigation/native';
 
 export default function EditarUsuario() {
     const [name, setName] = useState('');
@@ -19,6 +19,13 @@ export default function EditarUsuario() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+    const navigation = useNavigation();
+
+    const handleUpdate = () => {
+        navigation.navigate('BottomTabs');
+    };
+
     return (
         <CadastroContainer>
             <Image source={require('../../assets/images/logo-floating-park.png')} style={{ width: 150, height: 134 }} />

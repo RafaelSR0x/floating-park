@@ -22,10 +22,9 @@ export default function Cadastro() {
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
     const navigation = useNavigation();
-    const [saida, setSaida] = useState('');
 
     const handleRegister = () => {
-        navigation.navigate('Home');
+        navigation.navigate('BottomTabs');
     };
 
     return (

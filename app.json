@@ -20,10 +20,16 @@
         "foregroundImage": "",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.rafaelsr0x.floatingpark"
     },
     "web": {
       "favicon": ""
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a56e8c71-0d7c-427f-82e0-a2a3f709e1db"
+      }
     }
   }
 }

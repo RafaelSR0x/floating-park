@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Feather';
 import { useNavigation } from '@react-navigation/native';
 import RegistroSaida from '../registro-saida';
+import BottomBar from '../../assets/components/BottomBar';
 
 export default function Saida() {
     const navigation = useNavigation();
@@ -13,8 +14,6 @@ export default function Saida() {
     const handleVerificar = () => {
         navigation.navigate('RegistroSaida', { placa: saida });
     };
-
-
 
     return (
         <ContainerSaida>
@@ -35,6 +34,7 @@ export default function Saida() {
             </InputWrapper>
 
             <PrimaryButton title="Verificar" onPress={handleVerificar} />
+            <BottomBar />
         </ContainerSaida>
     );
 }

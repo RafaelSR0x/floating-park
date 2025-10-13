@@ -17,6 +17,7 @@ const Container = styled.View`
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: 10;
 `;
 
 const TabButton = styled.TouchableOpacity`
@@ -34,6 +35,7 @@ const Label = styled.Text`
 
 export default function BottomBar({ state, descriptors, navigation }) {
     if (!state) return null;
+
     return (
         <Container>
             {state.routes.map((route, index) => {
